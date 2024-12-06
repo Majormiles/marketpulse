@@ -36,7 +36,7 @@ const Banner = () => {
                             >
                                 {
                                     [1, 2, 3, 4, 5, 6, 7].map((img, i) => <Link className='lg-md:h-[200px] h-auto w-full block' key={i} to='#'>
-                                        <img src={`http://localhost:3000/images/banner/${img}.jpg`} alt="" />
+                                        <img src={`https://marketpulse-oxxa.onrender.com/images/banner/${img}.jpg`} alt="" />
                                     </Link>)
                                 }
                             </Carousel>
@@ -61,7 +61,7 @@ const Banner = () => {
                             >
                                 {
                                     [1, 2, 3,].map((img, i) => <Link className='lg-md:h-[200px] h-auto w-full block' key={i} to='#'>
-                                        <img src={`http://localhost:3000/images/add/${img}.gif`} alt="" />
+                                        <img src={`https://marketpulse-oxxa.onrender.com/images/add/${img}.gif`} alt="" />
                                     </Link>)
                                 }
                             </Carousel>
