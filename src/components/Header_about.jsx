@@ -63,7 +63,7 @@ const Headers = () => {
                                     <a href="https://github.com/Majormiles" target="_blank"><AiFillGithub /></a>
                                 </div>
                                 <div className='flex group cursor-pointer text-slate-800 text-sm justify-center items-center gap-1 relative after:h-[18px] after:w-[1px] after:bg-[#afafaf] after:-right-[16px] after:absolute before:absolute before:h-[18px] before:bg-[#afafaf] before:w-[1px] before:-left-[20px]'>
-                                    <img src="http://localhost:3000/images/language.png" alt="" />
+                                    <img src="https://marketpulse-oxxa.onrender.com/images/language.png" alt="" />
                                     {/* <span><MdOutlineKeyboardArrowDown /></span>
                                     <ul className='absolute invisible transition-all to-12 rounded-sm duration-200 text-white p-2 w-[100px] flex flex-col gap-3 group-hover:visible group-hover:top-6 group-hover:bg-black z-10'>
                                         <li>Ewe</li>
@@ -91,7 +91,7 @@ const Headers = () => {
                         <div className='md-lg:w-full w-3/12 md-lg:pt-4'>
                             <div className='flex justify-between items-center'>
                                 <Link to='/'>
-                                    <img style={{ width: '200px', height: 'auto' }}  src="http://localhost:3000/images/logo.png" alt="logo" />
+                                    <img style={{ width: '200px', height: 'auto' }}  src="https://marketpulse-oxxa.onrender.com/images/logo.png" alt="logo" />
                                 </Link>
                                 <div className='justify-center items-center w-[30px] h-[30px] bg-white text-slate-600 border border-slate-600 rounded-sm cursor-pointer lg:hidden md-lg:flex xl:hidden hidden' onClick={() => setShowShidebar(false)}>
                                     <span><FaList /></span>
