@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { useDispatch, useSelector } from 'react-redux'
 import 'swiper/css/pagination'
-import { Pagination } from 'swiper'
+import { Pagination } from 'swiper/modules';
 import Ratings from '../components/Ratings'
 import { AiFillHeart } from 'react-icons/ai'
 import { FaFacebookF, FaLinkedin } from 'react-icons/fa'
