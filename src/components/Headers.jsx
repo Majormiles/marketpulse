@@ -56,7 +56,7 @@ const Headers = () => {
                         <div>
                             <div className='flex justify-center items-center gap-10'>
                                 <div className='flex justify-center items-center gap-4'>
-                                    <a href="http://localhost:3001/login" target="_blank">Become a Vendor</a>
+                                    <a href="https://dashboard-j33q.onrender.com/login" target="_blank">Become a Vendor</a>
                                     {/* <a href="#"><FaFacebookF /></a> */}
                                     <a href="#"><AiOutlineTwitter /></a>
                                     <a href="#"><FaLinkedinIn /></a>
@@ -105,7 +105,7 @@ const Headers = () => {
                                         <Link to='/' className={`p-2 block ${pathname === '/' ? 'text-[#fff]' : 'text-slate-600'}`}>Home</Link>
                                     </li>
                                     <li>
-                                        <Link to='/shops'  className={`p-2 block ${pathname === '/shop' ? 'text-[#fd7700]' : 'text-slate-600'}`}>Shop</Link>
+                                        <Link className={`p-2 block ${pathname === '/shop' ? 'text-[#fd7700]' : 'text-slate-600'}`}>Shop</Link>
                                     </li>
                                     <li>
                                         <Link  className={`p-2 block ${pathname === '/blog' ? 'text-[#fd7700]' : 'text-slate-600'}`} >Blog <sup style={{ color: '#f97316' }}>New</sup>
@@ -177,7 +177,7 @@ const Headers = () => {
                                 <Link to='/' className={`py-2 block ${pathname === '/' ? 'text-[#fd7700]' : 'text-slate-600'}`}>Home</Link>
                             </li>
                             <li>
-                                <Link  to='/shops' className={`py-2 block ${pathname === '/shop' ? 'text-[#fd7700]' : 'text-slate-600'}`}>Shop</Link>
+                                <Link  className={`py-2 block ${pathname === '/shop' ? 'text-[#fd7700]' : 'text-slate-600'}`}>Shop</Link>
                             </li>
                             <li>
                                 <Link  className={`py-2 block ${pathname === '/blog' ? 'text-[#fd7700]' : 'text-slate-600'}`}>Blog</Link>
