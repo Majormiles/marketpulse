@@ -27,9 +27,8 @@ const Footer = () => {
             const botContainer = document.querySelector('.orimon-bot'); // Adjust the class if needed
             if (botContainer) {
                 botContainer.style.position = 'fixed';  // Make the bot fixed at the viewport
-                botContainer.style.bottom = '40px';     // Set margin from bottom of the screen
+                botContainer.style.bottom = '60px';     // Set margin from bottom of the screen
                 botContainer.style.left = '20px';       // Optional: set margin from the left side
-                botContainer.style.right = '20px';      // Optional: set margin from the right side
                 botContainer.style.transition = 'bottom 0.3s ease'; // Smooth transition
     
                 // Move the bot from bottom to a small margin from the top after a delay
