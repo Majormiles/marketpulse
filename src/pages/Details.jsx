@@ -6,7 +6,7 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
+import 'swiper/swiper-bundle.css'; // This includes both the general swiper CSS and the pagination styles.
 import { useDispatch, useSelector } from 'react-redux'
 import 'swiper/css/pagination'
 import { Pagination } from 'swiper/modules';
