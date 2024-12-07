@@ -120,6 +120,8 @@ export const get_reviews = createAsyncThunk(
     }
 )
 
+
+
 export const homeReducer = createSlice({
     name: 'home',
     initialState: {
@@ -198,6 +200,9 @@ export const homeReducer = createSlice({
 
     }
 })
+
+
+
 export const {
     messageClear
 } = homeReducer.actions

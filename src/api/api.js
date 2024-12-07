@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = process.env.REACT_APP_API_URL || 'https://marketpulse-api.onrender.com';
+const baseURL = process.env.REACT_APP_API_URL || 'https://marketpulse-oxxa.onrender.com';
 
 const api = axios.create({
     baseURL: `${baseURL}/api`,
