@@ -3,37 +3,32 @@ import {
     createAsyncThunk
 } from '@reduxjs/toolkit'
 import api from '../../api/api'
+
+
 export const get_category = createAsyncThunk(
     'product/get_category',
-    async (_, {
-        fulfillWithValue
-    }) => {
-        try {
-            const {
-                data
-            } = await api.get('/home/get-categorys')
-            return fulfillWithValue(data)
-        } catch (error) {
-            console.log(error.response)
-        }
+    async (_, { rejectWithValue }) => {
+      try {
+        const { data } = await api.get('/home/get-categorys');
+        return data;
+      } catch (error) {
+        return rejectWithValue(error.response?.data || 'Unknown error');
+      }
     }
-)
-
-export const get_products = createAsyncThunk(
+  );
+  
+  export const get_products = createAsyncThunk(
     'product/get_products',
-    async (_, {
-        fulfillWithValue
-    }) => {
-        try {
-            const {
-                data
-            } = await api.get('/home/get-products')
-            return fulfillWithValue(data)
-        } catch (error) {
-            console.log(error.response)
-        }
+    async (_, { rejectWithValue }) => {
+      try {
+        const { data } = await api.get('/home/get-products');
+        return data;
+      } catch (error) {
+        return rejectWithValue(error.response?.data || 'Unknown error');
+      }
     }
-)
+  );
+  
 
 export const get_product = createAsyncThunk(
     'product/get_product',
