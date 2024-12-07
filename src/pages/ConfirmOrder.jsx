@@ -68,7 +68,7 @@ const ConfirmOrder = () => {
         const orderId = localStorage.getItem('orderId')
         if (orderId) {
             try {
-                const response = await axios.get(`https://marketpulse-api.onrender.com:8080/api/order/confirm/${orderId}`)
+                const response = await axios.get(`https://marketpulse-api.onrender.com:5000/api/order/confirm/${orderId}`)
                 if (response.status === 200) {
                     localStorage.removeItem('orderId')
                     setLoader(false)
