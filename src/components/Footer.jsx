@@ -15,18 +15,37 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
 
-     useEffect(() => {
+    useEffect(() => {
         const script = document.createElement('script');
         script.src = "https://bot.orimon.ai/deploy/index.js";
         script.async = true;
         script.setAttribute('tenantId', '917a5841-f376-49df-8865-f4805a754e07');
         document.body.appendChild(script);
+    
+        // Wait until the script is loaded and apply styles
+        script.onload = () => {
+            const botContainer = document.querySelector('.orimon-bot'); // Adjust the class if needed
+            if (botContainer) {
+                botContainer.style.position = 'fixed';  // Make the bot fixed at the viewport
+                botContainer.style.bottom = '40px';     // Set margin from bottom of the screen
+                botContainer.style.left = '20px';       // Optional: set margin from the left side
+                botContainer.style.right = '20px';      // Optional: set margin from the right side
+                botContainer.style.transition = 'bottom 0.3s ease'; // Smooth transition
+    
+                // Move the bot from bottom to a small margin from the top after a delay
+                setTimeout(() => {
+                    botContainer.style.bottom = 'auto';  // Remove bottom
+                    botContainer.style.top = '50px';     // Set margin from the top
+                }, 500); // Wait for half a second before moving it up
+            }
+        };
+    
+        // Clean up the script when the component is unmounted
         return () => {
             document.body.removeChild(script);
         };
     }, []);
-
-
+    
 
 
     return (
