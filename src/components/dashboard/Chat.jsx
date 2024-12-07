@@ -88,7 +88,7 @@ const Chat = () => {
             <Link to={`/dashboard/chat/${f.fdId}`} key={i} className={`flex gap-2 justify-start items-center pl-2 py-[5px]`}>
               <div className='w-[30px] h-[30px] rounded-full relative'>
                 {activeSeller.some(c => c.sellerId === f.fdId) && <div className='w-[10px] h-[10px] rounded-full bg-green-500 absolute right-0 bottom-0'></div>}
-                <img src="http://localhost:3000/images/user.png" alt="" />
+                <img src="https://marketpulse-oxxa.onrender.com/images/user.png" alt="" />
               </div>
               <span>{f.name}</span>
             </Link>
@@ -102,14 +102,14 @@ const Chat = () => {
             <div className='flex justify-start gap-3 items-center text-slate-600 text-xl h-[50px]'>
               <div className='w-[30px] h-[30px] rounded-full relative'>
                 {activeSeller.some(c => c.sellerId === currentFd.fdId) && <div className='w-[10px] h-[10px] rounded-full bg-green-500 absolute right-0 bottom-0'></div>}
-                <img src="http://localhost:3000/images/user.png" alt="" />
+                <img src="https://marketpulse-oxxa.onrender.com/images/user.png" alt="" />
               </div>
               <span>{currentFd.name}</span>
             </div>
             <div className='messages' ref={scrollRef}>
               {fd_messages.map((m, i) => (
                 <div key={i} className={`w-full flex gap-2 ${m.senderId !== userInfo.id ? 'justify-start' : 'justify-end'} items-center`}>
-                  <img className='w-[30px] h-[30px]' src="http://localhost:3000/images/user.png" alt="" />
+                  <img className='w-[30px] h-[30px]' src="https://marketpulse-oxxa.onrender.com/images/user.png" alt="" />
                   <div className={`p-2 rounded-md ${m.senderId !== userInfo.id ? 'bg-purple-500 text-white' : 'bg-cyan-500 text-white'}`}>
                     <span>{m.message}</span>
                   </div>
