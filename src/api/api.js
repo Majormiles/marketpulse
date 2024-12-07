@@ -1,8 +1,6 @@
-import axios from 'axios'
-// const local = 'https://marketpulse-api.onrender.com'
-const production = 'https://marketpulse-api.onrender.com'
+const baseURL = process.env.REACT_APP_API_URL || 'https://marketpulse-api.onrender.com';
 const api = axios.create({
-    baseURL: `${production}/api`,
-    withCredentials : true
-})
-export default api
+    baseURL: `${baseURL}/api`,
+    withCredentials: true
+});
+export default api;
