@@ -56,7 +56,7 @@ const Headers = () => {
                         <div>
                             <div className='flex justify-center items-center gap-10'>
                                 <div className='flex justify-center items-center gap-4'>
-                                    <a href="http://localhost:3001/login" target="_blank">Become a Vendor</a>
+                                    <a href="https://dashboard-j33q.onrender.com/login" target="_blank">Become a Vendor</a>
                                     {/* <a href="#"><FaFacebookF /></a> */}
                                     <a href="#"><AiOutlineTwitter /></a>
                                     <a href="#"><FaLinkedinIn /></a>

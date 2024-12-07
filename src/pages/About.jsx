@@ -19,7 +19,7 @@ const About = () => {
                 <div className="flex justify-start flex-col gap-6">
                     {/* Logo Section */}
                     <Link to="/">
-                        <img src="http://localhost:3000/images/logo.png" alt="logo" />
+                        <img src="https://marketpulse-oxxa.onrender.com/images/logo.png" alt="logo" />
                     </Link>
 
                     {/* Menu Section */}
