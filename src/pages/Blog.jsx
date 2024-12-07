@@ -10,7 +10,7 @@ const Blog = () => {
     useEffect(() => {
         // Fetch blog posts
         const fetchBlogs = async () => {
-            const response = await fetch('https://marketpulse-oxxa.onrender.com/api/blogs');
+            const response = await fetch('http://localhost:5000/api/blogs');
             const data = await response.json();
             setBlogs(data);
 
