@@ -16,36 +16,43 @@ const Footer = () => {
 
 
     useEffect(() => {
+        // Create and load the bot script
         const script = document.createElement('script');
         script.src = "https://bot.orimon.ai/deploy/index.js";
         script.async = true;
         script.setAttribute('tenantId', '917a5841-f376-49df-8865-f4805a754e07');
         document.body.appendChild(script);
-    
-        // Wait until the script is loaded and apply styles
-        script.onload = () => {
-            const botContainer = document.querySelector('.orimon-bot'); // Adjust the class if needed
-            if (botContainer) {
-                botContainer.style.position = 'fixed';  // Make the bot fixed at the viewport
-                botContainer.style.bottom = '60px';     // Set margin from bottom of the screen
-                botContainer.style.left = '20px';       // Optional: set margin from the left side
-                botContainer.style.transition = 'bottom 0.3s ease'; // Smooth transition
-    
-                // Move the bot from bottom to a small margin from the top after a delay
-                setTimeout(() => {
-                    botContainer.style.bottom = 'auto';  // Remove bottom
-                    botContainer.style.top = '50px';     // Set margin from the top
-                }, 500); // Wait for half a second before moving it up
+
+        // Function to dynamically position the bot widget
+        const setWidgetPosition = () => {
+            const botWidget = document.getElementById('orimon-bot'); // Ensure this matches the bot widget's ID or class
+            if (botWidget) {
+                const isMobile = window.innerWidth <= 768;
+                botWidget.style.position = 'fixed';
+                botWidget.style.bottom = '20px';
+                botWidget.style.right = isMobile ? 'auto' : '20px';
+                botWidget.style.left = isMobile ? '20px' : 'auto';
             }
         };
-    
-        // Clean up the script when the component is unmounted
+
+        // Set position on load and on resize
+        const handleResize = () => setWidgetPosition();
+        window.addEventListener('resize', handleResize);
+
+        // Set position when the script is loaded
+        script.onload = () => {
+            setWidgetPosition();
+        };
+
+        // Cleanup script and event listener
         return () => {
             document.body.removeChild(script);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
-    
 
+    return null; // No JSX output
+    
 
     return (
         <footer className='bg-[#F3F6Fa]'>
