@@ -20,7 +20,7 @@ const Footer = () => {
         const script = document.createElement('script');
         script.src = "https://bot.orimon.ai/deploy/index.js";
         script.async = true;
-        script.setAttribute('tenantId', '917a5841-f376-49df-8865-f4805a754e07');
+        script.setAttribute('tenantId', 'a394f060-24d7-4e1d-ab61-1d7c15457f56');
         document.body.appendChild(script);
 
         // Function to dynamically position the bot widget
@@ -52,7 +52,7 @@ const Footer = () => {
     }, []);
 
     return null; // No JSX output
-    
+
 
     return (
         <footer className='bg-[#F3F6Fa]'>
